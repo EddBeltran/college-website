@@ -1,0 +1,73 @@
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Blocks */
+.block {
+    padding-top: 1rem;
+}
+
+.block--dark {
+    background: rgb(11, 11, 119);
+}
+
+/* Grid */
+.grid {
+    display: grid;
+}
+
+.grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* -----------------------------------------------------------edit  */
+
+/* Cards */
+.cards-group {
+    grid-gap: 5px;
+}
+
+.card {
+    min-height: 25rem;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: none;
+}
+
+.card-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(139, 219, 166, 0.74);
+    width: 100%;
+    height: 100%;
+}
+
+.card-text:hover{
+    background-color: rgba(22, 50, 94, 0.74);
+}
+
+.img-1{
+    background-image: url(../images/tsu.jpg);
+    background-size: cover;
+}
+
+.img-2{
+    background-image: url(../images/ingenierias.jpg);
+    background-size: cover;
+}
+
+.img-3{
+    background-image: url(../images/licenciaturas.jpg);
+    background-size: cover;
+}

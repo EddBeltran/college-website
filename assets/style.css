@@ -5,7 +5,17 @@ html {
 
 body {
     font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
 }
+
+h1, h2, h3 {
+    font-size: 2.4rem;
+}
+
+p, a {
+    font-size: 1.5rem;
+}
+
 
 .container {
     max-width: 1140px;
@@ -31,6 +41,11 @@ body {
 }
 
 /* -----------------------------------------------------------edit  */
+/* Text headers */
+.text-header {
+    text-align: center;
+    margin: 4rem 0;
+}
 
 /* Cards */
 .cards-group {
@@ -48,26 +63,69 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(139, 219, 166, 0.74);
+    background-color: rgba(24, 26, 24, 0.671);
     width: 100%;
     height: 100%;
 }
 
 .card-text:hover{
-    background-color: rgba(22, 50, 94, 0.74);
+    background-color: rgba(27, 82, 45, 0.74);
 }
 
 .img-1{
-    background-image: url(../images/tsu.jpg);
+    background-image: url(../images/tsu.webp);
     background-size: cover;
 }
 
 .img-2{
-    background-image: url(../images/ingenierias.jpg);
+    background-image: url(../images/ingenierias.webp);
     background-size: cover;
 }
 
 .img-3{
-    background-image: url(../images/licenciaturas.jpg);
+    background-image: url(../images/licenciaturas.webp);
     background-size: cover;
+}
+
+
+
+/* jumbotron box */
+.jumbotrom {
+    height: 25rem;
+}
+
+.image-layer {
+    background-color: rgba(24, 26, 24, 0.829);
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.bro {
+    max-width: 80%;
+    margin: 0 auto;
+    color: #fff;
+}
+
+
+
+.img-4 {
+    background-image: url(../images/por_que_utmz.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Button */
+
+.btn {
+    padding: 1rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: darkgreen;
+    color: #fff;
 }

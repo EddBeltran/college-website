@@ -24,24 +24,69 @@
             </div>
         </nav>
     </header>
+
+
     <section class="big-container">
-        <div class="slider">
-            <img class="slider-image" src="images/carr_1.jpg" alt="">
-            <div class="slider-shadow">
-                <img class="slider-btn-back" src="images/icon_backward.svg" alt="">
-                <div class="small-container slider-content">
-                    <div class="slider-content__text">
-                        <h1>¡Somos Linces!</h1>
+        <div class="hero-slider">
+            <!-- Page 1 -->
+            <div class="slider-page fade">
+                <img class="slider-image" src="images/carr_1.jpg" alt="">
+                <div class="slider-shadow">
+                    <div class="small-container slider-text">
+                        <h1>Texto texto!</h1>
                         <p>Apoya y forma parte de los equipos deportivos que representan a la UTMZ.</p>
                         <a href="#" class="btn btn-primary">Conoce más</a>
                     </div>
-                    <div class="slider-content__image"></div>
                 </div>
-                <img class="slider-btn-next" src="images/icon_forward.svg" alt="">
             </div>
+
+            <!-- Page 2 -->
+            <div class="slider-page fade">
+                <img class="slider-image" src="images/carr_2.jpg" alt="">
+                <div class="slider-shadow">
+                    <div class="small-container slider-text">
+                        <h1>Texto texto!</h1>
+                        <p>Apoya y forma parte de los equipos deportivos que representan a la UTMZ.</p>
+                        <a href="#" class="btn btn-primary">Conoce más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page 3 -->
+            <div class="slider-page fade">
+                <img class="slider-image" src="images/carr_3.jpg" alt="">
+                <div class="slider-shadow">
+                    <div class="small-container slider-text">
+                        <h1>Texto texto!</h1>
+                        <p>Apoya y forma parte de los equipos deportivos que representan a la UTMZ.</p>
+                        <a href="#" class="btn btn-primary">Conoce más</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Buttons -->
+            <a class="btn-prev" href="#" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="btn-next" href="#" onclick="plusSlides(1)">&#10095;</a>
+            <!-- Dots -->
+            <div class="slider-dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
         </div>
     </section>
+
+            <!-- <div class="slider-shadow">
+                <div class="small-container slider-content">
+                    <div class="slider-content__text">
+                        <h1>Texto texto!</h1>
+                        <p>Apoya y forma parte de los equipos deportivos que representan a la UTMZ.</p>
+                        <a href="#" class="btn btn-primary">Conoce más</a>
+                    </div>
+                </div> -->
+            <!-- </div> -->
     
     <script src="script.js"></script>
+    <script src="slider.js"></script>
 </body>
 </html>

@@ -222,78 +222,73 @@ img {
     overflow: hidden;
     color: #fff;
     text-decoration: none;
+    position: relative;
+}
+
+.card-link img{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
 }
 
 .card-text{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(24, 26, 24, 0.671);
+    background-color: rgba(29, 30, 31, 0.459);
     width: 100%;
     height: 100%;
+    z-index: 2;
+    position: absolute;
 }
 
 .card-text:hover{
-    background-color: rgba(27, 82, 45, 0.74);
+    background-color: rgba(22, 87, 22, 0.671);
+    transition: 0.1s ease-in;
 }
-
-.img-1{
-    background-image: url(../images/tsu.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.img-2{
-    background-image: url(../images/ingenierias.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.img-3{
-    background-image: url(../images/licenciaturas.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-
 
 /* jumbotron box */
 .jumbotrom {
     height: 25rem;
+    margin-top: 5px;
+    position: relative;
+    overflow: hidden;
 }
 
-.jumbotrom-layer {
-    background-color: rgba(24, 26, 24, 0.829);
+.jumbotrom img{
     width: 100%;
     height: 100%;
-    margin-top: 5px;
-    display: flex;
-    align-items: center;
+    object-fit: cover;
+    position: absolute;
 }
 
 .jumbotrom-content {
-    max-width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 4rem;
     color: #fff;
+    position: absolute;
+    background: rgba(21, 22, 24, 0.671);
 }
-
-.img-4 {
-    background-image: url(../images/por_que_utmz.webp);
-    background-size: cover;
-    background-position: center;
+.jumbotrom-content p {
+    max-width: 70ch;
+    padding-bottom: 1rem;
+    font-size: 1.7rem;
+    line-height: 1.3;
 }
 
 /* Ventajas de estudiar en UTMZ */
 .facts {
     justify-items: center;
-    background: chartreuse;
 }
-.tio {
-    background: #00d9ff;
-    border: 2px solid red;
+.fact {
     width: 80%;
     text-align: center;
     padding: 1rem;
+}
+.fact p {
+    font-weight: bold;
+    color: var(--color-primary);
 }
 
 
@@ -394,12 +389,19 @@ img {
 }
 .linces-cloud__background-image {
     position: absolute;
-    max-width: 50%;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+
     top: 0;
     right: 0;
 }
 
 /* Ultimas Noticias */
+.news { 
+    padding-bottom: 4rem;
+}
+
 .news-section {
     position: relative;
     padding: 0 4rem;
@@ -422,13 +424,13 @@ img {
     text-decoration: none;
 }
 .card-news {
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     box-shadow: -5px 5px 10px 1px rgba(0, 0, 0, 0.2);
 }
 .card-news-head {
-    background: rgb(80, 47, 47);
+    background: gray;
     height: 200px;
     overflow: hidden;
 }
@@ -439,21 +441,21 @@ img {
 }
 
 .card-news-body {
-    height: 150px;
+    height: 200px;
     padding: 1.5rem;
     overflow: hidden;
 }
 .card-news-body h4 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: bold;
-    color: rgb(61, 58, 58);
+    color: var(--color-primary);
     margin: 0;
 }
 .card-news-body a {
     font-size: 1.5rem;
     text-decoration: none;
     font-weight: bold;
-    color: var(--color-secondary);
+    color: var(--color-accent-hover);
     margin: 0;
 }
 
@@ -463,7 +465,7 @@ img {
 }
 
 .card-news-body a:hover {
-    color: var(--color-secondary-hover);
+    color: var(--color-accent);
     transition: all .4s cubic-bezier(0.19,1,0.22,1);
 }
 

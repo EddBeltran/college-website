@@ -16,6 +16,7 @@ html {
 body {
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 1rem;
+    user-select: none;
 }
 
 h1, h2, h3 {
@@ -97,6 +98,7 @@ img {
     position: fixed;
     width: 100%;
     z-index: 10;
+
 }
 .nav-menu {
     background: rgba(255, 0, 0, 0);
@@ -105,19 +107,38 @@ img {
 .nav-menu img {
     max-width:200px;
 }
-
-.nav-menu-items {
+.nav-menu__items {
     padding: 2rem 0 1rem 0;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
-.nav-menu-items a {
+.nav-menu__links a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
     padding-left: 1rem;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+
+.nav-scrolled {
+    background: #fff;
+    box-shadow: -5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+.nav-scrolled a {
+    color: var(--color-primary);
 }
 
 /* Slider */
@@ -223,10 +244,15 @@ img {
     color: #fff;
     text-decoration: none;
     position: relative;
+    text-align: center;
 }
 
 .card-link img{
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     z-index: 1;
 }
@@ -398,17 +424,11 @@ img {
 }
 
 /* Ultimas Noticias */
-.news { 
+.news-section {
     padding-bottom: 4rem;
 }
-
-.news-section {
-    position: relative;
-    padding: 0 4rem;
-    justify-items: center;
-}
 .news-prev {
-    top: 120px;
+    top: 200px;
     left: 0;
     font-size: 3rem;
     position: absolute;
@@ -416,42 +436,60 @@ img {
     text-decoration: none;
 }
 .news-next {
-    top: 120px;
+    top: 200px;
     right: 0;
     font-size: 3rem;
     position: absolute;
     color: #000;
     text-decoration: none;
 }
-.card-news {
-    width: 90%;
+/* news slider */
+.news-container {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+.news-inner {
+    margin: 2rem 8rem;
+    position: absolute;
+    display: inline-flex;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+    cursor: grab;
+}
+.news {
+    width: 300px;
     display: flex;
     flex-direction: column;
     box-shadow: -5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    /* transition: transform 0.3s ease-out; */
+    margin-right: 6rem;
+
 }
-.card-news-head {
+.news-head {
     background: gray;
     height: 200px;
     overflow: hidden;
 }
-.card-news-head img {
+.news-head img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
-.card-news-body {
+.news-body {
     height: 200px;
     padding: 1.5rem;
     overflow: hidden;
 }
-.card-news-body h4 {
+.news-body h4 {
     font-size: 1.6rem;
     font-weight: bold;
     color: var(--color-primary);
     margin: 0;
 }
-.card-news-body a {
+.news-body a {
     font-size: 1.5rem;
     text-decoration: none;
     font-weight: bold;
@@ -459,21 +497,28 @@ img {
     margin: 0;
 }
 
-.card-news-body a::after {
+.news-body a::after {
     content: "\226B";
     padding-left: 0.5rem;
 }
 
-.card-news-body a:hover {
+.news-body a:hover {
     color: var(--color-accent);
     transition: all .4s cubic-bezier(0.19,1,0.22,1);
 }
 
-.card-news-body a:hover::after {
+.news-body a:hover::after {
     display: inline-block;
     padding-left: 1.5rem;
     transition: all .4s cubic-bezier(0.19,1,0.22,1);
 }
+.grabbing {
+    cursor: grabbing;
+}
+.grabbing .new{
+    transform: scale(0.9);
+}
+
 
 /* Footer */
 .footer {
@@ -490,14 +535,13 @@ img {
 .footer__socialmedia {
     grid-column: 1;
     grid-row: 1 / span 4;
-    padding-bottom: 10rem;
+    max-width: 200px;
 }
 .footer-logo-utmz{
     max-width: 250px;
 }
 .redes-sociales{
     margin: 2.5rem 0;
-    max-width: 200px;
     display: flex;
     justify-content: space-between;
 }
@@ -544,4 +588,122 @@ img {
     text-decoration: none;
     color: gray;
     padding-right: 2rem;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .small-container {
+        padding: 2rem;
+    }
+    /* nav menu */
+    .nav-menu__links {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 0;
+        background: var(--color-primary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 60%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-menu__links a{
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+    /* oferta educativa */
+    .grid--1x3 {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .card-link {
+        min-height: 20rem;
+    }
+    /* ventajas */
+    .grid--2x3 {
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* ventajas */
+    .grid--2x3 {
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* Certificaciones */
+    .grid--1x5 {
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* LincesCloud */
+    .linces-cloud img {
+        display: none;
+    }
+
+    /* news */
+
+
+    /* footer */
+    .footer__container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .footer__links {
+        grid-column: 1;
+        grid-row: 1;
+        flex-direction: column;
+    }
+    .links__collapsible {
+        border-bottom: 1px solid gray;
+        margin-bottom: 1rem;
+    }
+    .links__collapsible ul{
+        display: none;
+    }
+
+    .footer__socialmedia {
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0 auto;
+        text-align: center;
+        padding: 3rem 0;
+    }
+    .footer__Copyright {
+        grid-column: 1;
+        grid-row: 3;
+        text-align: center;
+        max-height: 100px;
+    }
+}
+
+/* Nav animations */
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line_1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line_2 {
+    opacity: 0;
+}
+.toggle .line_3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }

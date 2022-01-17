@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universidad UTMZ</title>
-    <link rel="stylesheet" href="assets/normalize.css">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/utmz_logo_casco_color.svg" sizes="any" type="image/svg+xml">
 </head>
 <body>
     <!-- Menu -->
     <header class="menu">
         <nav class="big-container nav-menu">
-            <div class="small-container nav-menu-items">
+            <div class="small-container nav-menu__items">
                 <div>
-                    <a href=""><img src="images/logo_utmz_con_icono_blanco.svg" alt=""></a>
+                    <a href=""><img src="images/utmz_logo_color.svg" alt="..." loading="lazy"></a>
                 </div>
-                <div>
+                <div class="nav-menu__links">
                     <a href="">Oferta</a>
                     <a href="">La UTMZ</a>
                     <a href="">Servicios</a>
                     <a href="">Admisiones</a>
                 </div>
+                <div class="burger">
+                    <div class="line_1"></div>
+                    <div class="line_2"></div>
+                    <div class="line_3"></div>
+                </div>
             </div>
+
         </nav>
     </header>
 
@@ -31,7 +38,7 @@
         <div class="hero-slider">
             <!-- Page 1 -->
             <div class="slider-page fade">
-                <img class="slider-image" src="images/carr_1.jpg" alt="">
+                <img class="slider-image" src="images/carr_1.jpg" alt="..." loading="lazy">
                 <div class="slider-shadow">
                     <div class="small-container slider-text">
                         <h1>Texto texto!</h1>
@@ -43,7 +50,7 @@
 
             <!-- Page 2 -->
             <div class="slider-page fade">
-                <img class="slider-image" src="images/carr_2.jpg" alt="">
+                <img class="slider-image" src="images/carr_2.jpg" alt="..." loading="lazy">
                 <div class="slider-shadow">
                     <div class="small-container slider-text">
                         <h1>Texto texto!</h1>
@@ -55,7 +62,7 @@
 
             <!-- Page 3 -->
             <div class="slider-page fade">
-                <img class="slider-image" src="images/carr_3.jpg" alt="">
+                <img class="slider-image" src="images/carr_3.jpg" alt="..." loading="lazy">
                 <div class="slider-shadow">
                     <!-- <div class="small-container slider-text">
                         <h1>Texto texto!</h1>
@@ -85,21 +92,21 @@
             <div class="grid grid--1x3 cards-group">
                 <!-- card 1 -->
                 <a href="" class="card-link">
-                    <img src="images/img_tsu.webp" alt="">
+                    <img src="images/img_tsu.webp" alt="..." loading="lazy">
                     <div class="card-text">
                         <h1>Técnico Superior</h1>
                     </div>
                 </a>
                 <!-- card 2 -->
                 <a href="" class="card-link">
-                    <img src="images/img_ingenierias.webp" alt="">
+                    <img src="images/img_ingenierias.webp" alt="..." loading="lazy">
                     <div class="card-text">
                         <h1>Ingenierías</h1>
                     </div>
                 </a>
                 <!-- card 3 -->
                 <a href="" class="card-link img-3">
-                    <img src="images/img_licenciaturas.webp" alt="">
+                    <img src="images/img_licenciaturas.webp" alt="..." loading="lazy">
                     <div class="card-text">
                         <h1>Licenciaturas</h1>
                     </div>
@@ -107,7 +114,7 @@
             </div>
             <!-- card 4 jumbotrom -->
             <div class="jumbotrom">
-                <img src="images/img_por_que_utmz.webp" alt="">
+                <img src="images/img_por_que_utmz.webp" alt="..." loading="lazy">
                 <div class="jumbotrom-content">
                     <h3>Cumple tus metas en UTMZ</h3>
                     <p>Estudia un TSU en 2 años, una Ingeniería o Licenciatura, en 1 año 8 meses y refuerza tus conocimientos con estancias profesionales.</p>
@@ -124,27 +131,27 @@
             <h2 class="text-header">Ventajas de estudiar en UTMZ</h2>
             <div class="grid grid--2x3 facts">
                 <div class="fact">
-                    <img src="images/logo_ingeniero.svg" alt="">
+                    <img src="images/logo_ingeniero.svg" alt="..." loading="lazy">
                     <p>Formación 70% práctica y 30% teórica</p>
                 </div>
                 <div class="fact">
-                    <img src="images/logo_grafico.svg" alt="">
+                    <img src="images/logo_grafico.svg" alt="..." loading="lazy">
                     <p>Programas educativos con alta demanda laboral</p>
                 </div>
                 <div class="fact">
-                    <img src="images/logo_mineria.svg" alt="">
+                    <img src="images/logo_mineria.svg" alt="..." loading="lazy">
                     <p>Visitas industriales y estancias profesionales</p>
                 </div>
                 <div class="fact">
-                    <img src="images/logo_deporte.svg" alt="">
+                    <img src="images/logo_deporte.svg" alt="..." loading="lazy">
                     <p>Actividades culturales y deportivas</p>
                 </div>
                 <div class="fact">
-                    <img src="images/logo_reconocimiento.svg" alt="">
+                    <img src="images/logo_reconocimiento.svg" alt="..." loading="lazy">
                     <p>Becas y emprendimiento</p>
                 </div>
                 <div class="fact">
-                    <img src="images/logo_personas.svg" alt="">
+                    <img src="images/logo_personas.svg" alt="..." loading="lazy">
                     <p>Tutores y profesores especializados</p>
                 </div>
             </div>
@@ -160,35 +167,35 @@
             
             <div class="grid grid--1x5 logos-goup">
                 <div class="logo-container">
-                    <img src="images/logo_iso.webp" alt="">
+                    <img src="images/logo_iso.webp" alt="..." loading="lazy">
                     <div class="logo-text">
                         <p>ISO 9001-2015</p>
                         <a href="">Conoce Más</a>
                     </div>
                 </div>
                 <div class="logo-container">
-                    <img src="images/logo_iso_14001_2015.webp" alt="">
+                    <img src="images/logo_iso_14001_2015.webp" alt="..." loading="lazy">
                     <div class="logo-text">
                         <p>ISO 14001-2015</p>
                         <a href="">Conoce Más</a>
                     </div>
                 </div>
                 <div class="logo-container">
-                    <img src="images/logo_norma.webp" alt="">
+                    <img src="images/logo_norma.webp" alt="..." loading="lazy">
                     <div class="logo-text">
                         <p>NMX-R-025-SCFI-2015</p>
                         <a href="">Conoce Más</a>
                     </div>
                 </div>
                 <div class="logo-container">
-                    <img src="images/logo_cacei.webp" alt="">
+                    <img src="images/logo_cacei.webp" alt="..." loading="lazy">
                     <div class="logo-text">
                         <p>Acreditación de CACEI</p>
                         <a href="">Conoce Más</a>
                     </div>
                 </div>
                 <div class="logo-container">
-                    <img src="images/logo_tierra.webp" alt="">
+                    <img src="images/logo_tierra.webp" alt="..." loading="lazy">
                     <div class="logo-text">
                         <p>Concurso escuelas por la tierra</p>
                         <a href="">Conoce Más</a>
@@ -203,48 +210,62 @@
     <section class="block block--primary big-container linces-cloud">
         <div class="small-container linces-cloud__content">
             <div class="linces-cloud__header">
-                <img src="images/logo_linces.svg" alt="">
+                <img src="images/logo_linces.svg" alt="..." loading="lazy">
                 <h2>LincesCloud</h2>
             </div>
             <p>La plataforma que nos mantiene conectados</p>
             <a class="btn btn-primary" href="#">Iniciar sesión</a>
         </div>
-        <img class="linces-cloud__background-image" src="images/img_lincescloud.webp" alt="">
+        <img class="linces-cloud__background-image" src="images/img_lincescloud.webp" alt="..." loading="lazy">
     </section>
 
         <!-- Ultimas noticias -->
-        <section class="block news">
+        <section class="block news-section">
             <div class="small-container">
+                
                 <h2 class="text-header">Últimas Noticias</h2>
-                <div class="grid grid--1x3 news-section">
-                    <!-- Card 1 -->
-                    <div class="card-news">
-                        <div class="card-news-head">
-                            <img src="images/img_noticia_1.webp" alt="">
+                <div class="news-container">
+
+                    <div class="news-inner">
+                        <!-- Card 1 -->
+                        <div class="news">
+                            <div class="news-head">
+                                <img src="images/img_noticia_1.webp" alt="..." loading="lazy">
+                            </div>
+                            <div class="news-body">
+                                <h4>Ganan torneo de fútbol alumnas de UTMZ</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit tempora obcaecati quae voluptatem provident perferendis ab! Necessitatibus, temporibus!</p>
+                                <a href="#">Conoce Más</a>
+                            </div>
                         </div>
-                        <div class="card-news-body">
-                            <h4>Ganan torneo de fútbol alumnas de UTMZ</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit tempora obcaecati quae voluptatem provident perferendis ab! Necessitatibus, temporibus!</p>
-                            <a href="#">Conoce Más</a>
+                        <!-- Card 2 -->
+                        <div class="news">
+                            <div class="news-head"><img src="images/img_noticia_2.webp" alt="..." loading="lazy"></div>
+                            <div class="news-body">
+                                <h4>¿Cómo será la vida estudiantil Post-Covid-19?</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus voluptas repellat perferendis sequi atque quasi.</p>
+                                <a href="#">Conoce Más</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="card-news">
-                        <div class="card-news-head"><img src="images/img_noticia_2.webp" alt=""></div>
-                        <div class="card-news-body">
-                            <h4>¿Cómo será la vida estudiantil Post-Covid-19?</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus voluptas repellat perferendis sequi atque quasi.</p>
-                            <a href="#">Conoce Más</a>
+                        <!-- Card 3 -->
+                        <div class="news">
+                            <div class="news-head"><img src="images/img_noticia_3.webp" alt="..." loading="lazy"></div>
+                            <div class="news-body">
+                                <h4>UTMZ paticipan en MEGA proyecto para mejorar la extracción de minerales</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, maiores explicabo ab dolore ullam provident qui.</p>
+                                <a href="#">Conoce Más</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="card-news">
-                        <div class="card-news-head"><img src="images/img_noticia_3.webp" alt=""></div>
-                        <div class="card-news-body">
-                            <h4>UTMZ paticipan en MEGA proyecto para mejorar la extracción de minerales</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, maiores explicabo ab dolore ullam provident qui.</p>
-                            <a href="#">Conoce Más</a>
+                        <!-- Card 2 -->
+                        <div class="news">
+                            <div class="news-head"><img src="images/img_noticia_2.webp" alt="..." loading="lazy"></div>
+                            <div class="news-body">
+                                <h4>¿Cómo será la vida estudiantil Post-Covid-19?</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus voluptas repellat perferendis sequi atque quasi.</p>
+                                <a href="#">Conoce Más</a>
+                            </div>
                         </div>
+                    
                     </div>
 
                     <!-- Buttons -->
@@ -260,12 +281,12 @@
         <footer class="block footer">
             <div class="small-container footer__container">
                 <div class="footer__socialmedia">
-                    <img class="footer-logo-utmz" src="images/utmz_logo_completo_color.svg" alt="">
+                    <img class="footer-logo-utmz" src="images/utmz_logo_completo_color.svg" alt="..." loading="lazy">
                     <div class="redes-sociales">
-                        <img src="images/icon-facebook.svg" alt="">
-                        <img src="images/icon-twitter.svg" alt="">
-                        <img src="images/icon-youtube.svg" alt="">
-                        <img src="images/icon-linkedin.svg" alt="">
+                        <img src="images/icon-facebook.svg" alt="..." loading="lazy">
+                        <img src="images/icon-twitter.svg" alt="..." loading="lazy">
+                        <img src="images/icon-youtube.svg" alt="..." loading="lazy">
+                        <img src="images/icon-linkedin.svg" alt="..." loading="lazy">
                     </div>
                     <a class="btn btn-primary" href="#">Contactanos</a>
                 </div>
@@ -325,12 +346,13 @@
                     <a href="#">Aviso legal</a>
                     <a href="#">Privacidad</a>
                     <a href="#">Cookies</a>
-                    <a href="#"> © UTMZ 2022</a>
+                    <a href="#"> ©UTMZ 2022</a>
                 </div>
             </div>
         </footer>
-    
-    <script src="script.js"></script>
-    <script src="slider.js"></script>
+
+    <script src="js/heroSlider.js"></script>
+    <script src="js/cardSlider.js"></script>
+    <script src="js/intersectionObserver.js"></script>
 </body>
 </html>

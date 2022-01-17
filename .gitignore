@@ -1,1 +1,4 @@
 borradores
+node_modules
+.cache
+dist

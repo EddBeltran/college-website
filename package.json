@@ -1,0 +1,23 @@
+{
+  "name": "college-website",
+  "version": "1.0.0",
+  "description": "This website was created in 2015 for a local college in Zimapan Hidalgo called UTMZ (Universidad Tecnologica Minera de Zimapán).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EddBeltran/college-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EddBeltran/college-website/issues"
+  },
+  "homepage": "https://github.com/EddBeltran/college-website#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
+}

@@ -38,6 +38,7 @@ img {
 .small-container {
     max-width: 1140px;
     margin: 0 auto;
+    padding: 2rem;
 }
 .big-container {
     max-width: 1920px;
@@ -46,7 +47,7 @@ img {
 
 /* Blocks */
 .block {
-    margin-top: 6rem;
+    margin-top: 8rem;
 }
 
 .block--primary {
@@ -72,7 +73,7 @@ img {
 /* Text headers */
 .text-header {
     text-align: center;
-    margin: 8rem 0 6rem 0;
+    margin: 6rem 0;
     color: var(--color-primary);
 }
 
@@ -108,7 +109,7 @@ img {
     max-width:200px;
 }
 .nav-menu__items {
-    padding: 2rem 0 1rem 0;
+    padding: 1.5rem 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -275,7 +276,7 @@ img {
 
 /* jumbotron box */
 .jumbotrom {
-    height: 25rem;
+    height: 250px;
     margin-top: 5px;
     position: relative;
     overflow: hidden;
@@ -341,10 +342,14 @@ img {
 .logo-text a{
     text-decoration: none;
     color: var(--color-secondary-hover);
+    opacity: 0;
 }
 .logo-container:hover .logo-text{
     transform: translateY(-2rem);
     transition: 0.3s ease-in;
+}
+.logo-container:hover .logo-text a{
+    opacity: 1;
 }
 .logo-container:hover p{
     transition: 0.3s ease-in;
@@ -558,15 +563,32 @@ img {
 }
 .links__collapsible {
     padding-right: 3rem;
+    height: auto;
 }
 .links__collapsible a {
     text-decoration: none;
     color: gray;
 }
-.links__collapsible > a:first-of-type {
+.links__collapsible p {
     font-weight: bold;
     color: var(--color-secondary);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
 }
+.links__collapsible p::after {
+    display: none;
+    content: "\003e";
+    color: var(--color-primary);
+    font-size: 2rem;
+    text-align: center;
+    background: lightgray;
+    padding: 3px 8px;
+    border-radius: 20px;
+    margin-left: 1rem;
+}
+
 .links__collapsible ul{
     list-style: none;
     list-style-position: inside;
@@ -597,8 +619,11 @@ img {
     body {
         overflow-x: hidden;
     }
-    .small-container {
-        padding: 2rem;
+    .block {
+        margin-top: 2rem;
+    }
+    .text-header {
+        margin: 4rem 0;
     }
     /* nav menu */
     .nav-menu__links {
@@ -628,9 +653,8 @@ img {
     .card-link {
         min-height: 20rem;
     }
-    /* ventajas */
-    .grid--2x3 {
-        grid-template-columns: repeat(2,1fr);
+    .jumbotrom {
+        height: 350px;
     }
     /* ventajas */
     .grid--2x3 {
@@ -638,12 +662,28 @@ img {
     }
     /* Certificaciones */
     .grid--1x5 {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .last-logo {
+        grid-row: 3;
+        grid-column: 1 / span 2;
+    }
+    .logo-container {
+        padding: 2rem;
+    }
+    .logo-text p {
+        padding: 1.5rem 0 0 0;
+        margin: 0;
     }
     /* LincesCloud */
-    .linces-cloud img {
+    .linces-cloud__background-image {
         display: none;
     }
+    .linces-cloud__content {
+        align-items: center;
+        text-align: center;
+    }
+
 
     /* news */
 
@@ -662,9 +702,26 @@ img {
     .links__collapsible {
         border-bottom: 1px solid gray;
         margin-bottom: 1rem;
+        padding: 0;
+        height: 50px;
+        overflow: hidden;
     }
-    .links__collapsible ul{
-        display: none;
+    .links__collapsible a {
+        opacity: 0;
+    }
+    .links__collapsible p::after {
+        display: block;
+    }
+    .links__collapsible-active {
+        height: auto;
+    }
+    .links__collapsible-active p::after {
+        transform: rotate(90deg);
+        transition: 0.3s all ease-in;
+    }
+    .links__collapsible-active a {
+        opacity: 1;
+        transition: 0.3s all ease-in;
     }
 
     .footer__socialmedia {
@@ -672,13 +729,17 @@ img {
         grid-row: 2;
         margin: 0 auto;
         text-align: center;
-        padding: 3rem 0;
+        padding: 4rem 0;
     }
     .footer__Copyright {
         grid-column: 1;
         grid-row: 3;
         text-align: center;
         max-height: 100px;
+    }
+    .footer__Copyright span{
+        display: block;
+        padding-top: 1rem;
     }
 }
 

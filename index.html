@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universidad UTMZ</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="icon" href="images/utmz_logo_casco_color.svg" sizes="any" type="image/svg+xml">
 </head>
 <body>
@@ -220,57 +222,63 @@
     </section>
 
         <!-- Ultimas noticias -->
-        <section class="block news-section">
+        <section class="block">
             <div class="small-container">
-                
                 <h2 class="text-header">Últimas Noticias</h2>
-                <div class="news-container">
+                <!-- Slider.js -->
+                <div class="swiper news-slider">
+                    <div class="swiper-wrapper">
 
-                    <div class="news-inner">
                         <!-- Card 1 -->
-                        <div class="news">
+                        <div class="swiper-slide news">
+                            <div class="news-head">
+                                <img src="images/img_noticia_3.webp" alt="..." loading="lazy">
+                            </div>
+                            <div class="news-body">
+                                <h4>UTMZ paticipan en MEGA proyecto para mejorar la extracción de minerales</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus voluptas repellat perferendis sequi atque quasi.</p>
+                                <a href="#">Conoce Más</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="swiper-slide news">
+                            <div class="news-head">
+                                <img src="images/img_noticia_2.webp" alt="..." loading="lazy">
+                            </div>
+                            <div class="news-body">
+                                <h4>¿Cómo será la vida estudiantil Post-Covid-19?</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus voluptas repellat perferendis sequi atque quasi.</p>
+                                <a href="#">Conoce Más</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="swiper-slide news">
                             <div class="news-head">
                                 <img src="images/img_noticia_1.webp" alt="..." loading="lazy">
                             </div>
                             <div class="news-body">
                                 <h4>Ganan torneo de fútbol alumnas de UTMZ</h4>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit tempora obcaecati quae voluptatem provident perferendis ab! Necessitatibus, temporibus!</p>
-                                <a href="#">Conoce Más</a>
-                            </div>
-                        </div>
-                        <!-- Card 2 -->
-                        <div class="news">
-                            <div class="news-head"><img src="images/img_noticia_2.webp" alt="..." loading="lazy"></div>
-                            <div class="news-body">
-                                <h4>¿Cómo será la vida estudiantil Post-Covid-19?</h4>
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus voluptas repellat perferendis sequi atque quasi.</p>
                                 <a href="#">Conoce Más</a>
                             </div>
                         </div>
-                        <!-- Card 3 -->
-                        <div class="news">
-                            <div class="news-head"><img src="images/img_noticia_3.webp" alt="..." loading="lazy"></div>
-                            <div class="news-body">
-                                <h4>UTMZ paticipan en MEGA proyecto para mejorar la extracción de minerales</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, maiores explicabo ab dolore ullam provident qui.</p>
-                                <a href="#">Conoce Más</a>
-                            </div>
-                        </div>
-                        <!-- Card 2 -->
-                        <div class="news">
-                            <div class="news-head"><img src="images/img_noticia_2.webp" alt="..." loading="lazy"></div>
-                            <div class="news-body">
-                                <h4>¿Cómo será la vida estudiantil Post-Covid-19?</h4>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus voluptas repellat perferendis sequi atque quasi.</p>
-                                <a href="#">Conoce Más</a>
-                            </div>
-                        </div>
-                    
-                    </div>
 
-                    <!-- Buttons -->
-                    <a class="news-prev" href="#">&#10094;</a>
-                    <a class="news-next" href="#">&#10095;</a>
+                        <!-- Card 4 -->
+                        <div class="swiper-slide news">
+                            <div class="news-head">
+                                <img src="images/img_noticia_2.webp" alt="..." loading="lazy">
+                            </div>
+                            <div class="news-body">
+                                <h4>¿Cómo será la vida estudiantil Post-Covid-19?</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus voluptas repellat perferendis sequi atque quasi.</p>
+                                <a href="#">Conoce Más</a>
+                            </div>
+                        </div>
+                    </div>                
+                    <div class="swiper-pagination"></div>
+                  </div>
                 </div>
                 
                 
@@ -350,9 +358,11 @@
                 </div>
             </div>
         </footer>
+    
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/footerLinks.js"></script>
     <script src="js/heroSlider.js"></script>
-    <script src="js/cardSlider.js"></script>
+    <script src="js/newsSlider.js"></script>
     <script src="js/intersectionObserver.js"></script>
 </body>
 </html>

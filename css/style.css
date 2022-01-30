@@ -48,7 +48,7 @@ img {
 
 /* Blocks */
 .block {
-    margin-top: 8rem;
+    margin-top: 2rem;
 }
 
 .block--primary {
@@ -74,7 +74,7 @@ img {
 /* Text headers */
 .text-header {
     text-align: center;
-    margin: 6rem 0;
+    margin: 4rem 0;
     color: var(--color-primary);
 }
 
@@ -123,7 +123,7 @@ img {
     display: none;
 }
 .nav-menu__items {
-    padding: 1.5rem 2rem;
+    padding: 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -162,16 +162,30 @@ img {
 /* Slider */
 .hero-slider {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
     position: relative;
 }
 .slider-page {
-    display: none;
     width: 100%;
     height: 100%;
     position: relative;
+    background: var(--color-primary);
 }
+.slider-logos {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.slider-logos img {
+    height: 300px;
+    object-fit: contain;
+    padding: 1rem 0;
+}
+
 .slider-image{
     width: 100%;
     height: 100%;
@@ -180,8 +194,7 @@ img {
     position: absolute;
 }
 .slider-shadow{
-    /* background-image: linear-gradient(150deg, rgba(7, 10, 29, 0.541) 30%, rgba(204, 211, 202, 0) 70%); */
-    background: var(--color-primary);
+    background-image: linear-gradient(160deg, rgba(4, 4, 56, 0.466) 50%, rgba(16, 17, 71, 0.171) 70%);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -189,67 +202,35 @@ img {
 }
 
 .slider-text{
-    color: #fff;
+    color: rgb(226, 224, 224);
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
 }
 
-/* Slider Buttons */
-.btn-prev, .btn-next {
-    top: 45vh;
-    position: absolute;
-    z-index: 4;
-    text-decoration: none;
-    font-size: 3rem;
-    color: #fff;
-}
-.btn-prev{
-    left: 0;
-    padding-left: 2rem;
-}
-.btn-next {
-    right: 0;
-    padding-right: 2rem;
-}
-/* The dots/bullets/indicators */
-.slider-dots {
-    bottom: 0;
-    left: 50vw;
-    position: absolute;
-    z-index: 4;
-    padding-bottom: 2rem;
-}
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: rgb(212, 211, 211);
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-.active, .dot:hover {
-    background-color: #717171;
+.slider-text h1 {
+    font-size: 4rem;
+    max-width: 25ch;
+    margin: 0;
 }
 
-/* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+.slider-text p {
+    font-size: 1.9rem;
+    max-width: 50ch;
+    line-height: 1.5;
+    padding: 1rem 0;
 }
-@-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+
+/* The dots/bullets/indicators */
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: var(--color-accent);
 }
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
+
+
+
+
 
 /* Cards */
 .cards-group {
@@ -410,7 +391,7 @@ img {
 }
 
 /* Ultimas Noticias */
-.swiper {
+.news-slider {
     width: 100%;
     height: 450px;
     padding: 0 2rem 4rem 2rem;
@@ -554,7 +535,11 @@ img {
 }
 
 
-
+@media screen and (max-width: 1024px) {
+    .slider-logos img{
+        height: 220px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     body {
@@ -592,7 +577,22 @@ img {
     .burger {
         display: block;
     }
-
+    /* Hero slider */
+    .slider-shadow{
+        background: rgba(4, 4, 56, 0.568);
+    }
+    .slider-logos img {
+        height: 300px;
+    }
+    .slider-logos :last-child {
+        display: none;
+    }
+    .slider-text h1 {
+        font-size: 3.5rem;
+    }
+    .slider-text p {
+        font-size: 1.9rem;
+    }
 
     /* oferta educativa */
     .grid--1x3 {

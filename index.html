@@ -38,52 +38,44 @@
 
     <!-- Hero slider -->
     <section class="big-container">
-        <div class="hero-slider">
-            <!-- Page 1 -->
-            <div class="slider-page fade">
-                <img class="slider-image" src="images/carr_1.jpg" alt="..." loading="lazy">
+        <div class="swiper hero-slider">
+            <div class="swiper-wrapper">
+            <!-- Slide 1 logos -->
+            <div class="swiper-slide slider-page">
+                <div class="slider-logos small-container">
+                    <img src="images/hero_slide_logo_1.webp" alt="...">
+                    <img src="images/hero_slide_logo_2.webp" alt="">
+                </div>
+            </div>
+            <!-- Slide 2 Alumna -->
+            <div class="swiper-slide slider-page">
+                <img class="slider-image" src="images/hero_slide_alumna.webp" alt="..." loading="lazy">
                 <div class="slider-shadow">
                     <div class="small-container slider-text">
-                        <h1>Texto texto!</h1>
-                        <p>Apoya y forma parte de los equipos deportivos que representan a la UTMZ.</p>
+                        <h1>Estudia en un ambiente de Igualdad</h1>
+                        <p>En UTMZ fomentamos un ambiente de Igualdad laboral y No discriminación.</p>
                         <a href="#" class="btn btn-primary">Conoce más</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Page 2 -->
-            <div class="slider-page fade">
-                <img class="slider-image" src="images/carr_2.jpg" alt="..." loading="lazy">
+            <!-- Slide 3 Ingeniero -->
+            <div class="swiper-slide slider-page">
+                <img class="slider-image" src="images/hero_slide_ingeniero.webp" alt="..." loading="lazy">
                 <div class="slider-shadow">
                     <div class="small-container slider-text">
-                        <h1>Texto texto!</h1>
-                        <p>Apoya y forma parte de los equipos deportivos que representan a la UTMZ.</p>
+                        <h1>Te preparamos para el futuro</h1>
+                        <p>Con clases intensivas, visitas industriales y estadías se prioriza la práctica y el saber hacer.</p>
                         <a href="#" class="btn btn-primary">Conoce más</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Page 3 -->
-            <div class="slider-page fade">
-                <img class="slider-image" src="images/carr_3.jpg" alt="..." loading="lazy">
-                <div class="slider-shadow">
-                    <!-- <div class="small-container slider-text">
-                        <h1>Texto texto!</h1>
-                        <p>Apoya y forma parte de los equipos deportivos que representan a la UTMZ.</p>
-                        <a href="#" class="btn btn-primary">Conoce más</a>
-                    </div> -->
-                </div>
-            </div>
-            
-            <!-- Slider Buttons -->
-            <a class="btn-prev" href="#" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="btn-next" href="#" onclick="plusSlides(1)">&#10095;</a>
-            <!-- Dots -->
-            <div class="slider-dots">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-              </div>
+            <!-- end slides -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+
         </div>
     </section>
 

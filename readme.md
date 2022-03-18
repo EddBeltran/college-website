@@ -1,5 +1,5 @@
-# College website
-This website was created in 2015 for a local college in Zimapan Hidalgo called UTMZ (Universidad Tecnologica Minera de Zimapán).
+# College Website
+This website was initially created in 2015 for a local college in Zimapan, Hidalgo, México called UTMZ (Universidad Tecnologica Minera de Zimapán). This porject helped me a lot to understand the main principles of web development. 
 
 ## Technologies:
 * HTML
@@ -7,8 +7,18 @@ This website was created in 2015 for a local college in Zimapan Hidalgo called U
 * Javascript
 
 ## Awards:
-* In 2015 I receive a diploma for the creation of this website. 
+In 2015, four high school collegues and I received a diploma for the creation of this website. 
 
-## Update (2021):
-* This website is not currenly used and hosted, but this porject helps me a lot to understand the main principles of web development. I made few changes in the code but the main idea is still there.
+## 2021 Updates:
+In order to improve the 2015 website, modern UI and CSS techniques were implemented, images were optimeze with WebP format, and finally, to deploy the site, Parcel and Netlify were used.
 
+### Lighthouse Report:
+* Performance: from 57% to 97%
+* Accesibility: from 82% to 96%
+* Best Practices: from 75% to 100%
+* SEO*
+
+*The current updates don't belong to the official website, so, SEO principles were not applied
+
+## Visit the website:
+<a href="https://college-website-utmz.netlify.app" target="_blank">college-website-utmz.netlify.app</a>
